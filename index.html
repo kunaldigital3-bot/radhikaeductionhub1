@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radhika Trader | Trading Updates</title>
 
-<!-- META PIXEL: KEEP SINGLE PIXEL -->
+<!-- META PIXEL: SINGLE PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;
@@ -114,8 +114,9 @@ h1{
   color:#443719;
 }
 
+/* COUNTDOWN */
 .countdown-box{
-  margin:18px 0;
+  margin:18px 0 12px;
   padding:15px 12px;
   border-radius:14px;
   background:#fff8e9;
@@ -123,6 +124,7 @@ h1{
   color:#5d481d;
   font-size:13px;
   line-height:1.7;
+  text-align:center;
 }
 
 #countdown{
@@ -150,31 +152,33 @@ h1{
   transition:width 1s linear;
 }
 
+/* ALWAYS VISIBLE AND CLICKABLE */
 .telegram{
   display:flex;
   align-items:center;
   justify-content:center;
   width:100%;
-  min-height:54px;
-  margin-top:15px;
-  padding:12px 10px;
-  border-radius:11px;
+  min-height:58px;
+  margin-top:12px;
+  padding:13px 10px;
+  border-radius:12px;
   background:#d89b2b;
   color:#fff;
   text-decoration:none;
+  text-align:center;
   font-size:15px;
   line-height:1.6;
   font-weight:bold;
-  box-shadow:0 5px 12px rgba(216,155,43,.2);
-  opacity:.55;
-  pointer-events:none;
-  cursor:not-allowed;
-}
-
-.telegram.ready{
+  box-shadow:0 5px 14px rgba(216,155,43,.25);
+  position:relative;
+  z-index:2;
   opacity:1;
   pointer-events:auto;
   cursor:pointer;
+}
+
+.telegram:active{
+  transform:scale(.98);
 }
 
 .adslink{
@@ -254,8 +258,8 @@ Trading Ideas &amp; Market Updates<br>
 <!-- 10 SECOND COUNTDOWN -->
 <div class="countdown-box">
   <div id="countdownMessage">
-    Telegram access will be ready in<br>
-    టెలిగ్రామ్ లింక్ త్వరలో సిద్ధమవుతుంది
+    Telegram link is available below<br>
+    టెలిగ్రామ్ లింక్ క్రింద అందుబాటులో ఉంది
   </div>
 
   <div id="countdown">00:10</div>
@@ -264,17 +268,16 @@ Trading Ideas &amp; Market Updates<br>
     <div id="countdownBar"></div>
   </div>
 
-  <div>Stay here for 10 seconds<br>
-  10 సెకన్లు వేచి ఉండండి</div>
+  <div>Join anytime — no need to wait<br>
+  ఎప్పుడైనా చేరవచ్చు — వేచి ఉండాల్సిన అవసరం లేదు</div>
 </div>
 
+<!-- BUTTON WORKS IMMEDIATELY -->
 <a href="https://t.me/+DGSzMw7Ksqs4Zjg1"
 class="telegram" id="telegramButton"
-target="_blank" rel="noopener noreferrer"
-aria-disabled="true">
-  <span id="buttonText">
-    Please Wait... / దయచేసి వేచి ఉండండి
-  </span>
+target="_blank" rel="noopener noreferrer">
+➤ Join Telegram Channel<br>
+టెలిగ్రామ్ ఛానల్‌లో చేరండి
 </a>
 
 </div>
@@ -294,37 +297,30 @@ Trading involves market risk. Profits are not guaranteed.<br>
 </div>
 
 <script>
-/* 10-second countdown */
+/* 10-SECOND COUNTDOWN */
 (function(){
-  let timeLeft = 10;
-  const timer = document.getElementById('countdown');
-  const bar = document.getElementById('countdownBar');
-  const button = document.getElementById('telegramButton');
-  const buttonText = document.getElementById('buttonText');
-  const message = document.getElementById('countdownMessage');
+  let timeLeft=10;
+  const timer=document.getElementById('countdown');
+  const bar=document.getElementById('countdownBar');
+  const message=document.getElementById('countdownMessage');
 
   function updateTimer(){
-    timer.textContent = '00:' + String(timeLeft).padStart(2,'0');
-    bar.style.width = (timeLeft / 10 * 100) + '%';
+    timer.textContent='00:'+String(timeLeft).padStart(2,'0');
+    bar.style.width=(timeLeft/10*100)+'%';
   }
 
   updateTimer();
 
-  const countdown = setInterval(function(){
+  const countdown=setInterval(function(){
     timeLeft--;
 
-    if(timeLeft <= 0){
-      timeLeft = 0;
+    if(timeLeft<=0){
+      timeLeft=0;
       updateTimer();
       clearInterval(countdown);
 
-      button.classList.add('ready');
-      button.setAttribute('aria-disabled','false');
-      buttonText.innerHTML =
-        '➤ Join Telegram Channel<br>టెలిగ్రామ్ ఛానల్‌లో చేరండి';
-
-      message.innerHTML =
-        'Your Telegram link is ready!<br>మీ టెలిగ్రామ్ లింక్ సిద్ధంగా ఉంది!';
+      message.innerHTML=
+      'Your Telegram link is ready!<br>మీ టెలిగ్రామ్ లింక్ సిద్ధంగా ఉంది!';
       return;
     }
 
@@ -332,17 +328,12 @@ Trading involves market risk. Profits are not guaranteed.<br>
   },1000);
 })();
 
-/* Meta Pixel Lead tracking — same Pixel ID */
+/* META PIXEL LEAD TRACKING */
 (function(){
-  const button = document.getElementById('telegramButton');
+  const button=document.getElementById('telegramButton');
 
-  button.addEventListener('click',function(event){
-    if(!button.classList.contains('ready')){
-      event.preventDefault();
-      return;
-    }
-
-    if(typeof window.fbq === 'function'){
+  button.addEventListener('click',function(){
+    if(typeof window.fbq==='function'){
       fbq('track','Lead');
     }
   });
