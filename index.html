@@ -1,60 +1,81 @@
 <!DOCTYPE html>
-<html lang="te">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radhika Trader</title>
+<title>Radhika Trader | Telugu & English</title>
 
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel: Single Pixel -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=true;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=true;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s);
+}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2064580280941119');
-fbq('track', 'PageView');
+
+fbq('init','2536383413541087');
+fbq('track','PageView');
 </script>
+
 <noscript>
 <img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2064580280941119&ev=PageView&noscript=1"/>
+src="https://www.facebook.com/tr?id=2536383413541087&ev=PageView&noscript=1"
+alt="">
 </noscript>
-<!-- End Meta Pixel Code -->
+<!-- End Meta Pixel -->
 
 <style>
+*{
+box-sizing:border-box;
+}
+
+html,body{
+margin:0;
+min-height:100%;
+}
 
 body{
-margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 background:#f5f5f5;
+color:#242424;
 display:flex;
 justify-content:center;
 align-items:center;
-min-height:100vh;
 flex-direction:column;
+min-height:100vh;
+padding:22px 14px;
+overflow-x:hidden;
 }
 
 .card{
-width:360px;
-background:white;
+width:100%;
+max-width:360px;
+background:#fff;
 border-radius:20px;
-padding:25px;
+padding:25px 22px;
 text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
+box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
 .topbtn{
 background:#d89b2b;
-color:white;
-padding:12px;
+color:#fff;
+padding:13px 10px;
 border-radius:8px;
 font-weight:bold;
-margin-bottom:15px;
+margin-bottom:18px;
 display:block;
 text-decoration:none;
+font-size:15px;
+line-height:1.5;
 }
 
 .profile{
@@ -69,31 +90,49 @@ margin-bottom:10px;
 h2{
 color:#c8891f;
 margin:10px 0;
+font-size:24px;
+line-height:1.4;
+}
+
+.intro{
+font-size:14px;
+line-height:1.7;
+margin:10px 0 14px;
 }
 
 .badge{
 background:#f3e6c7;
-padding:10px;
+padding:12px 9px;
 border-radius:10px;
-margin:8px 0;
+margin:9px 0;
 font-size:14px;
+line-height:1.6;
 }
 
 .telegram{
-margin-top:15px;
+margin-top:17px;
 background:#d89b2b;
-color:white;
-padding:14px;
+color:#fff;
+padding:15px 10px;
 border-radius:10px;
 font-weight:bold;
 text-decoration:none;
 display:block;
+font-size:16px;
+line-height:1.5;
+box-shadow:0 5px 12px rgba(216,155,43,.2);
+}
+
+.telegram:active,.topbtn:active{
+transform:scale(.98);
 }
 
 .adslink{
-margin-top:15px;
-font-size:14px;
+margin-top:18px;
+font-size:13px;
+line-height:1.8;
 text-align:center;
+color:#555;
 }
 
 .adslink a{
@@ -102,53 +141,115 @@ text-decoration:none;
 font-weight:bold;
 }
 
+.disclaimer{
+max-width:360px;
+text-align:center;
+font-size:10px;
+line-height:1.6;
+color:#777;
+margin-top:16px;
+}
+
+@media(max-width:380px){
+.card{
+padding:22px 17px;
+}
+.profile{
+width:108px;
+height:108px;
+}
+h2{
+font-size:22px;
+}
+.badge{
+font-size:13px;
+}
+}
 </style>
-
-<script>
-
-/* fake click reduce */
-let allowClick=false;
-setTimeout(()=>{
-allowClick=true;
-},2000);
-
-function joinTG(){
-if(!allowClick){
-alert("దయచేసి 2 సెకండ్లు వేచి ఉండండి...");
-return false;
-}
-window.location.href="https://t.me/+eGlSBQ4eVQZlNGE9";
-}
-
-</script>
-
 </head>
 
 <body>
 
 <div class="card">
 
-<a href="#" class="topbtn" onclick="joinTG()">టెలిగ్రామ్ ఛానల్‌లో చేరండి</a>
+<a href="https://t.me/+DGSzMw7Ksqs4Zjg1"
+class="topbtn" id="topJoin" target="_blank"
+rel="noopener noreferrer">
+Join Telegram Channel<br>
+టెలిగ్రామ్ ఛానల్‌లో చేరండి
+</a>
 
-<img src="logo.png" class="profile">
+<img src="logo.png" class="profile" alt="Radhika Trader">
 
-<h2>👑 రాధికా ట్రేడర్ 👑</h2>
+<h2>👑 Radhika Trader 👑</h2>
 
-<div>⚡ ✅ 95% అధిక ఖచ్చితత్వం ✅ ఉత్తమ ట్రేడింగ్ నిపుణుడు ⚡</div>
+<div class="intro">
+Trading Ideas &amp; Market Updates<br>
+ట్రేడింగ్ ఐడియాస్ మరియు మార్కెట్ అప్‌డేట్స్
+</div>
 
-<div class="badge">కొత్త నైపుణ్యాలు నేర్చుకోండి ✅ 📊</div>
-<div class="badge">💎 ప్రతిరోజూ లాభం హామీ 💎</div>
-<div class="badge">⚡ ఇంట్రాడే ఆప్షన్ ట్రేడర్స్ ⚡</div>
-<div class="badge">📊 షేర్ మార్కెట్‌లో 14 సంవత్సరాల అనుభవం</div>
+<div class="badge">
+📚 Learn Trading Skills<br>
+ట్రేడింగ్ నైపుణ్యాలను నేర్చుకోండి
+</div>
 
-<a href="#" class="telegram" onclick="joinTG()">టెలిగ్రామ్ ఛానల్‌లో చేరండి</a>
+<div class="badge">
+📊 Intraday Trading Ideas<br>
+ఇంట్రాడే ట్రేడింగ్ ఐడియాస్
+</div>
+
+<div class="badge">
+📈 Entry, Exit &amp; Risk Management<br>
+ఎంట్రీ, ఎగ్జిట్ మరియు రిస్క్ మేనేజ్‌మెంట్
+</div>
+
+<div class="badge">
+🌟 Market Learning &amp; Updates<br>
+మార్కెట్ సమాచారం మరియు అప్‌డేట్స్
+</div>
+
+<a href="https://t.me/+DGSzMw7Ksqs4Zjg1"
+class="telegram" id="telegramButton"
+target="_blank" rel="noopener noreferrer">
+➤ Join Telegram Channel<br>
+టెలిగ్రామ్ ఛానల్‌లో చేరండి
+</a>
 
 </div>
 
 <div class="adslink">
-Ads Setup Kunal Ads ke liye DM kare 👉  
-<a href="https://t.me/+hZA7we0AX_s3ZWQ1">Click Here</a>
+Need Ads Setup? Contact Kunal Ads<br>
+యాడ్స్ సెటప్ కోసం సంప్రదించండి<br>
+<a href="https://t.me/+hZA7we0AX_s3ZWQ1"
+target="_blank" rel="noopener noreferrer">
+Contact Kunal Ads
+</a>
 </div>
+
+<div class="disclaimer">
+Trading involves market risk. No profits or returns are guaranteed.<br>
+ట్రేడింగ్‌లో మార్కెట్ రిస్క్ ఉంటుంది. లాభాలకు హామీ లేదు.
+</div>
+
+<script>
+/* Track Telegram button clicks */
+(function(){
+const buttons=[
+document.getElementById('topJoin'),
+document.getElementById('telegramButton')
+];
+
+buttons.forEach(function(button){
+if(!button)return;
+
+button.addEventListener('click',function(){
+if(typeof window.fbq==='function'){
+fbq('track','Lead');
+}
+});
+});
+})();
+</script>
 
 </body>
 </html>
